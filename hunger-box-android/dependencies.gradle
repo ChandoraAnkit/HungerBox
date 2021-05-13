@@ -1,0 +1,59 @@
+ext {
+
+    kotlinVer = '1.3.61'
+    navComponentVer = '2.2.1'
+    coreKtxVer = '1.2.0'
+    multiDexVer = '1.0.3'
+    appCompatVer = '1.1.0'
+    constraintLayoutVer = '1.1.3'
+    lifecycleVer = '2.2.0'
+    daggerVer = '2.27'
+    timberVer = '4.7.1'
+    firebaseAuthVer = '19.3.1'
+    fireStoreVer = '21.4.3'
+    juintVer = '4.12'
+    junitKtVer = '1.1.1'
+    espressoVer = '3.2.0'
+    playServiceCoroutineVer = '1.1.1'
+
+
+    generalDependencies = [
+            coreKtx         : "androidx.core:core-ktx:$coreKtxVer",
+            kotlinJdk       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVer",
+
+            multiDex: "com.android.support:multidex:$multiDexVer",
+
+            appCompat       : "androidx.appcompat:appcompat:$appCompatVer",
+            vectorDrawable  : "androidx.vectordrawable:vectordrawable:$appCompatVer",
+            materialDesign  : "com.google.android.material:material:$appCompatVer",
+
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$constraintLayoutVer",
+            lifecycler      : "androidx.lifecycle:lifecycle-extensions:$lifecycleVer",
+
+            timber          : "com.jakewharton.timber:timber:$timberVer",
+
+            playCoroutineKtx: "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$playServiceCoroutineVer",
+
+            navFrag   : "androidx.navigation:navigation-fragment:$navComponentVer",
+            navFragKtx: "androidx.navigation:navigation-fragment-ktx:$navComponentVer",
+            navUi     : "androidx.navigation:navigation-ui:$navComponentVer",
+            navUiKtx  : "androidx.navigation:navigation-ui-ktx:$navComponentVer",
+
+            dagger       : "com.google.dagger:dagger:$daggerVer",
+            daggerAndroid: "com.google.dagger:dagger-android-support:$daggerVer",
+
+            firebaseAuth: "com.google.firebase:firebase-auth:$firebaseAuthVer",
+            fireStore: "com.google.firebase:firebase-firestore-ktx:$fireStoreVer"
+    ]
+
+    kaptDependencies = [
+            daggerCompiler       : "com.google.dagger:dagger-compiler:$daggerVer",
+            daggerAndroidCompiler: "com.google.dagger:dagger-android-processor:$daggerVer"
+    ]
+
+    testingDependencies = [
+            junit   : "junit:junit:$juintVer",
+            junitExt: "androidx.test.ext:junit:$junitKtVer",
+            espresso: "androidx.test.espresso:espresso-core:$espressoVer"
+    ]
+}

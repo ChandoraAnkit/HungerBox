@@ -1,0 +1,10 @@
+/.gradle
+/.idea
+/out
+/build
+*.iml
+*.ipr
+*.iws
+.DS_Store
+hungerbox-firebase-debug-config.json
+hungerbox-firebase-release-config.json

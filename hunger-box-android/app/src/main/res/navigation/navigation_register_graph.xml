@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_login_fragment"
+    android:id="@+id/navigation_register_graph">
+
+    <fragment
+        android:id="@+id/navigation_login_fragment"
+        android:name="com.androidy.hungerbox.ui.loginRegister.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_fragment_to_register_fragment"
+            app:destination="@id/navigation_register_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_register_fragment"
+        android:name="com.androidy.hungerbox.ui.loginRegister.register.RegisterFragment"
+        android:label="@string/title_register"
+        tools:layout="@layout/fragment_register" >
+
+    </fragment>
+
+</navigation>

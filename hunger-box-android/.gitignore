@@ -1,0 +1,9 @@
+google-services.json
+*.iml
+.idea/
+.gradle/
+local.properties
+build/
+/captures
+.externalNativeBuild
+.DS_Store
