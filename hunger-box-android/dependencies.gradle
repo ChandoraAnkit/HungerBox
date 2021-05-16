@@ -1,7 +1,7 @@
 ext {
 
     kotlinVer = '1.3.61'
-    navComponentVer = '2.2.1'
+    navComponentVer = '2.3.5'
     coreKtxVer = '1.2.0'
     multiDexVer = '1.0.3'
     appCompatVer = '1.1.0'
