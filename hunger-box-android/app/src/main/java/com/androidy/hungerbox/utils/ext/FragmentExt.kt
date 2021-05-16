@@ -26,23 +26,20 @@ fun Fragment.setUpToolbar(toolbar: Toolbar,
     if (topLevelFragments.isEmpty())
         setupWithNavController(toolbar, findNavController())
     else {
+
         //Manually syncing the state of toolbar prevent flickering of toolbar icon.
-        val appBarConfiguration = AppBarConfiguration.Builder(
-                topLevelFragments.toSet()
-        ).setDrawerLayout(drawerLayout).build()
+        val appBarConfiguration: AppBarConfiguration
+        if (drawerLayout == null){
+            toolbar.navigationIcon = null
+            appBarConfiguration = AppBarConfiguration(topLevelFragments.toSet())
+        }else{
+            toolbar.navigationIcon = DrawerArrowDrawable(toolbar.context)
+            appBarConfiguration = AppBarConfiguration(topLevelFragments.toSet(), drawerLayout)
+        }
 
         val navController = findNavController()
-
-        toolbar.setNavigationOnClickListener { navController.navigateUp(appBarConfiguration) }
-
-        //Set title.
         toolbar.title = navController.currentDestination?.label
-
-        //Set icon.
-        if (drawerLayout == null)
-            toolbar.navigationIcon = null
-        else
-            toolbar.navigationIcon = DrawerArrowDrawable(toolbar.context)
+        toolbar.setNavigationOnClickListener { navController.navigateUp(appBarConfiguration) }
     }
 }
 
