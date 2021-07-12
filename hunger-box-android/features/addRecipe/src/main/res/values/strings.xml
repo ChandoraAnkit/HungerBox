@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_module">Add Recipe</string>
+
+    <string name="msg_recipe_name">Recipe Name</string>
+    <string name="title_select_category">Select a category</string>
+    <string name="msg_veg">Vegetarian</string>
+    <string name="msg_non_veg">Non-Vegetarian</string>
+    <string name="title_servings">Servings</string>
+    <string name="msg_serving_counts">Servings count</string>
+    <string name="title_prepare_time">Preparation time</string>
+    <string name="title_cooking_time">Cooking time</string>
+    <string name="title_ingredients">Ingredients</string>
+    <string name="title_directions">Directions</string>
+    <string name="msg_description">Description</string>
+    <string name="msg_delete_ingredient">Delete ingredient</string>
+    <string name="msg_add_ingredient">Add Ingredient</string>
+    <string name="msg_add_direction">Add Direction</string>
+    <string name="text_add">Add</string>
+
+</resources>

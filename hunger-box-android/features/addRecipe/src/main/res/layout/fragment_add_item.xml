@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".addrecipe.ui.steps.addItem.AddItemFragment">
+
+    <data>
+
+        <variable
+            name="pageType"
+            type="Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.androidy.hungerbox.addrecipe.ui.AddRecipeViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/page_margin">
+
+            <TextView
+                android:id="@+id/title_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{pageType== 0 ? @string/title_ingredients : @string/title_directions}"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredient_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/section_margin"
+                app:items="@{pageType == 0 ? viewModel.ingredients : viewModel.directions }"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_ingredients" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            layout="@layout/layout_add_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:pageType= "@{pageType}"
+            app:viewModel="@{viewModel}" />
+
+    </FrameLayout>
+
+
+</layout>

@@ -1,55 +1,59 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
-    id("kotlin-kapt")
-    id("androidx.navigation.safeargs.kotlin")
-    id("com.google.gms.google-services")
+    id(BuildPlugins.ANDROID_APPLICATION)
+    kotlin(BuildPlugins.ANDROID)
+    kotlin(BuildPlugins.ANDROID_EXTENSIONS)
+    kotlin(BuildPlugins.KAPT)
+    id(BuildPlugins.NAVIGATION_SAFE_ARGS)
+    id(BuildPlugins.GOOGLE_PLAY_SERVICE)
 }
 
-
 android {
-    compileSdkVersion(29)
-    buildToolsVersion("29.0.3")
+    compileSdkVersion(BuildAndroidConfig.COMPILE_SDK_VERSION)
+    buildToolsVersion(BuildAndroidConfig.BUILD_TOOL_VERSION)
 
     defaultConfig {
-        applicationId = "com.androidy.hungerbox"
-        minSdkVersion(18)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = BuildAndroidConfig.APPLICATION_ID
+        minSdkVersion(BuildAndroidConfig.MIN_SDK_VERSION)
+        targetSdkVersion(BuildAndroidConfig.TARGET_SDK_VERSION)
 
-        multiDexEnabled = true
-        vectorDrawables.useSupportLibrary = true
+        versionCode = BuildAndroidConfig.VERSION_CODE
+        versionName = BuildAndroidConfig.VERSION_NAME
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = BuildAndroidConfig.MULTIDEX_ENABLE
+        vectorDrawables.useSupportLibrary = BuildAndroidConfig.SUPPORT_LIBRARY_VECTOR_DRAWABLES
+
+        testInstrumentationRunner = BuildAndroidConfig.ANDROID_TEST_JUNIT_RUNNER
     }
 
     buildTypes {
-        getByName("debug"){
-            applicationIdSuffix = ".debug"
+        getByName(BuildType.DEBUG) {
+            isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
+            applicationIdSuffix = BuildTypeDebug.applicationIdSuffix
         }
-        getByName("release") {
-            isMinifyEnabled = false
+        getByName(BuildType.RELEASE) {
+            isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 
     compileOptions {
-        sourceCompatibility =JavaVersion.VERSION_1_8
-        targetCompatibility =JavaVersion.VERSION_1_8
-    }
-
-    kapt {
-        generateStubs = true
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    dataBinding {
-        isEnabled = true
+    dynamicFeatures = mutableSetOf(
+        BuildModules.Features.AUTH,
+        BuildModules.Features.FEEDS,
+        BuildModules.Features.ADD_RECIPE,
+        BuildModules.Features.PROFILE
+    )
+
+    buildFeatures {
+        dataBinding = true
     }
 }
 
@@ -57,31 +61,30 @@ dependencies {
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation(GeneralDependencies.CORE_KTX)
-    implementation(GeneralDependencies.KOTLIN_JDK)
-    implementation(GeneralDependencies.MULTI_DEX)
+    implementation(project(BuildModules.CORE))
+    implementation(project(BuildModules.COMMON_UI))
 
-    implementation(GeneralDependencies.APP_COMPAT)
-    implementation(GeneralDependencies.VECTOR_DRAWABLE)
-    implementation(GeneralDependencies.MATERIAL_DESIGN)
-    implementation(GeneralDependencies.CONSTRAINT_LAYOUT)
-    implementation(GeneralDependencies.LIFECYCLE_EXT)
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.MULTI_DEX)
 
-    implementation(GeneralDependencies.NAV_FRAG)
-    implementation(GeneralDependencies.NAV_FRAG_KTX)
-    implementation(GeneralDependencies.NAV_UI)
-    implementation(GeneralDependencies.NAV_UI_KTX)
+    implementation(Dependencies.VECTOR_DRAWABLE)
+    implementation(Dependencies.MATERIAL_DESIGN)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.LIFECYCLE_EXT)
 
-    implementation(GeneralDependencies.DAGGER)
-    implementation(GeneralDependencies.DAGGER_ANDROID)
-    kapt(KaptDependencies.DAGGER_COMPILER)
-    kapt(KaptDependencies.DAGGER_PROCESSOR)
+    implementation(Dependencies.NAVIGATION_FRAG)
+    implementation(Dependencies.NAVIGATION_FRAG_KTX)
+    implementation(Dependencies.NAVIGATION_UI)
+    implementation(Dependencies.NAVIGATION_UI_KTX)
 
-    implementation(GeneralDependencies.FIREBASE_AUTH)
-    implementation(GeneralDependencies.FIRESTORE)
 
-    implementation(GeneralDependencies.TIMBER)
-    implementation(GeneralDependencies.COROUTINE_EXT)
+    implementation(Dependencies.DAGGER)
+    kapt(AnnotationProcessorDependencies.DAGGER_COMPILER)
+    kapt(AnnotationProcessorDependencies.DAGGER_PROCESSOR)
+
+    implementation(DebugDependencies.TIMBER)
+    implementation(Dependencies.COROUTINE_EXT)
 
     testImplementation(TestDependencies.JUNIT)
     testImplementation(TestDependencies.JUNIT_EXT)

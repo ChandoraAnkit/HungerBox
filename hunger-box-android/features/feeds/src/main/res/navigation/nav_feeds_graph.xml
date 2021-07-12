@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_feeds_graph"
+    app:startDestination="@+id/fragment_feeds">
+
+    <fragment
+        android:id="@+id/fragment_feeds"
+        android:name="com.androidy.hungerbox.feeds.ui.FeedsFragment"
+        android:label="@string/title_feeds"
+        />
+</navigation>

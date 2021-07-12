@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@+id/navigation_feeds">
+
+    <action
+        android:id="@+id/action_global_to_navigation_auth"
+        app:destination="@id/navigation_auth"
+        app:popUpTo="@id/navigation_feeds"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_to_navigation_feeds"
+        app:destination="@id/navigation_feeds"
+        app:popUpTo="@id/navigation_feeds"
+        app:popUpToInclusive="true" />
+
+    <include-dynamic
+        android:id="@+id/navigation_feeds"
+        app:graphPackage="com.androidy.hungerbox.feeds"
+        app:graphResName="nav_feeds_graph"
+        app:moduleName="@string/module_name_feeds">
+    </include-dynamic>
+
+    <include-dynamic
+        android:id="@+id/navigation_add_recipe"
+        app:graphPackage="com.androidy.hungerbox.addrecipe"
+        app:graphResName="nav_add_recipe_graph"
+        app:moduleName="@string/module_name_add_recipe">
+
+    </include-dynamic>
+
+    <include-dynamic
+        android:id="@+id/navigation_profile"
+        app:graphPackage="com.androidy.hungerbox.profile"
+        app:graphResName="nav_profile_graph"
+        app:moduleName="@string/module_name_profile" />
+
+    <include-dynamic
+        android:id="@+id/navigation_auth"
+        app:graphPackage="com.androidy.hungerbox.auth"
+        app:graphResName="nav_auth_graph"
+        app:moduleName="@string/module_name_auth" />
+
+</navigation>

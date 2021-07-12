@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_module">Auth</string>
+
+    <string name="title_register">Register</string>
+    <string name="title_login">Login</string>
+
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+
+    <string name="msg_error_login">Failed to login.</string>
+    <string name="msg_error_register">Failed to register.</string>
+
+    <string name="msg_mandatory_fields">All fields are mandatory.</string>
+
+</resources>

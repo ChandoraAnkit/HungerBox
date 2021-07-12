@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".addrecipe.ui.AddRecipeFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.androidy.hungerbox.addrecipe.ui.AddRecipeViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/containerRl"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/layout_toolbar"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/recipe_steps_vp"
+                app:onPageChangedListener="@{viewModel}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/next_step_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_next"
+            app:fabSize="normal"
+            android:onClick="@{() -> viewModel.nextStep()}"
+            app:layout_anchor="@id/recipe_steps_vp"
+            app:layout_anchorGravity="top|right|end" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

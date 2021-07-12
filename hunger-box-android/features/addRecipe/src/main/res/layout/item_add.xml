@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.androidy.hungerbox.addrecipe.data.Item" />
+        <variable
+            name="viewModel"
+            type="com.androidy.hungerbox.addrecipe.ui.AddRecipeViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/field_vertical_margin"
+            android:paddingBottom="@dimen/field_vertical_margin">
+
+            <EditText
+                android:id="@+id/item_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/msg_add_ingredient"
+                android:background="@android:color/transparent"
+                android:inputType="text|textMultiLine"
+                android:text="@{item.value}"
+                android:enabled="false"
+                android:textColor="@drawable/selector_editext_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/edit_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10 tbsp Chilly Powder dfdf df df df df dfdffsdf"
+                tools:ignore="LabelFor" />
+
+            <ImageView
+                android:id="@+id/edit_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/msg_delete_ingredient"
+                android:paddingStart="@dimen/field_horizontal_margin"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/delete_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/done_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/msg_delete_ingredient"
+                android:paddingStart="@dimen/field_horizontal_margin"
+                android:paddingEnd="@dimen/field_horizontal_margin"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/delete_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/msg_delete_ingredient"
+                android:paddingStart="@dimen/field_horizontal_margin"
+                android:onClick="@{() -> viewModel.deleteItem(item.id)}"
+                android:paddingEnd="@dimen/field_horizontal_margin"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
