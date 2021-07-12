@@ -23,7 +23,7 @@ class RecipeDao(private val database: MongoDatabase) {
         return getRecipeById(recipeId)
     }
 
-    fun deleteRecipe(recipeId: String): Boolean {
+    fun deleteR ecipe(recipeId: String): Boolean {
         return recipeCollection.deleteOne(Recipe::recipeId eq recipeId)
             .wasAcknowledged()
     }

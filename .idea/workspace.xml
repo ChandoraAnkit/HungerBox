@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f36b99ea-7213-4914-9774-e372a5dc0b42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/base/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/base/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/base/BaseListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/base/BaseListAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/base/BaseViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/base/BaseViewHolder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/base/BaseViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/base/BaseViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/RepositoryQualifiers.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/Result.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/data/Result.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/Item.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/RecipeModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/RecipeModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/source/AddRecipeDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/source/AddRecipeDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/source/AddRecipeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/source/AddRecipeRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/source/SpinnerItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/source/SpinnerItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/addRecipe/source/remote/AddRecipeRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/data/source/remote/AddRecipeRemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/loginRegister/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/data/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/loginRegister/source/LoginRegisterDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/data/source/LoginRegisterDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/loginRegister/source/LoginRegisterRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/data/source/LoginRegisterRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/data/loginRegister/source/remote/LoginRegisterRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/data/source/remote/LoginRegisterRemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/di/FragmentBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/di/FragmentBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/di/ViewModelModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/di/ViewModelModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeBinding.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeBinding.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeStepsFragmentBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeStepsFragmentBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeStepsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeStepsPagerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/AddRecipeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/AddRecipeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/RecipeSteps.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/RecipeSteps.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/steps/RecipeDescriptionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/steps/RecipeDescriptionFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/steps/RecipePreviewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/steps/RecipePreviewFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/steps/RecipeServingDetailsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/steps/RecipeServingDetailsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/steps/addItem/AddItemFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/steps/addItem/AddItemFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/addRecipe/steps/addItem/AddItemsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/addRecipe/src/main/java/com/androidy/hungerbox/addrecipe/ui/steps/addItem/AddItemsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/explore/ExploreFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/explore/ExploreFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/explore/ExploreViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/explore/ExploreViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/feeds/FeedsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/feeds/FeedsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/feeds/FeedsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/feeds/FeedsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/loginRegister/LoginRegisterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/ui/LoginRegisterModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/loginRegister/LoginRegisterViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/LoginRegisterViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/loginRegister/login/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/ui/login/LoginFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/loginRegister/register/RegisterFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/java/com/androidy/hungerbox/auth/ui/register/RegisterFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/notifications/NotificationsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/notifications/NotificationsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/notifications/NotificationsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/notifications/NotificationsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/profile/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/profile/src/main/java/com/androidy/hungerbox/profile/ui/ProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/profile/ProfileModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/profile/src/main/java/com/androidy/hungerbox/profile/ui/ProfileModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/ui/profile/ProfileViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/profile/src/main/java/com/androidy/hungerbox/profile/ui/ProfileViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/Event.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/Event.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/bindings/SpinnerBindings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/bindings/SpinnerBindings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/ContextExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/ContextExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/FragmentExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/FragmentExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/ListExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/ListExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/SpinnerExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/SpinnerExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/ViewExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/ViewExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/java/com/androidy/hungerbox/utils/ext/ViewGroupExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/core/src/main/java/com/androidy/hungerbox/core/utils/extensions/ViewGroupExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_add_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_add_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_add_recipe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_add_recipe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_description.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_description.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_preview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_serving_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_recipe_serving_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/features/auth/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/item_add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/item_add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/layout_add_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/layout/layout_add_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/navigation/navigation_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/navigation/navigation_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/navigation/navigation_register_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/app/src/main/res/navigation/navigation_register_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/buildSrc/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-box-android/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-box-android/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1t5BRUkl7RbeMqTtKEPZIE5YWiD" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f36b99ea-7213-4914-9774-e372a5dc0b42" name="Default Changelist" comment="" />
+      <created>1622049061414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622049061414</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -2,24 +2,17 @@ package com.androidy.hungerbox.di
 
 import android.app.Application
 import com.androidy.hungerbox.HungerBoxApplication
-import dagger.BindsInstance
+import com.androidy.hungerbox.core.di.CoreComponent
+import com.androidy.hungerbox.core.di.scopes.AppScope
 import dagger.Component
-import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
-
-@Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, AppModule::class,
-    ActivityBuilder::class, ViewModelModule::class])
+@AppScope
+@Component(
+    dependencies = [CoreComponent::class],
+    modules = [AppModule::class]
+)
 interface AppComponent {
 
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun application(application: Application): Builder
-
-        fun build(): AppComponent
-    }
-
-    fun inject(app: HungerBoxApplication)
+    fun inject(application: HungerBoxApplication)
 }

@@ -1,11 +1,13 @@
 package com.androidy.hungerbox
 
 import android.app.Application
+import androidx.fragment.app.Fragment
+import com.androidy.hungerbox.core.BuildConfig
+import com.androidy.hungerbox.core.di.CoreComponent
+import com.androidy.hungerbox.core.di.DaggerCoreComponent
+import com.androidy.hungerbox.core.di.modules.ContextModule
 import com.androidy.hungerbox.di.DaggerAppComponent
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
 import timber.log.Timber
-import javax.inject.Inject
 
 
 /**
@@ -13,20 +15,35 @@ import javax.inject.Inject
  */
 
 
-class HungerBoxApplication : Application(), HasAndroidInjector {
+class HungerBoxApplication : Application() {
 
-    @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
-
-    override fun androidInjector() = dispatchingAndroidInjector
+    lateinit var coreComponent: CoreComponent
 
     override fun onCreate() {
         super.onCreate()
 
+        initCoreDi()
+        initAppDi()
+
         if (BuildConfig.DEBUG)
             Timber.plant(Timber.DebugTree())
-
-        DaggerAppComponent.builder().application(this)
-                .build().inject(this)
     }
+
+    private fun initAppDi() {
+        DaggerAppComponent
+            .builder()
+            .coreComponent(coreComponent)
+            .build()
+            .inject(this)
+    }
+
+    private fun initCoreDi() {
+      coreComponent = DaggerCoreComponent
+            .builder()
+            .context(this)
+            .build()
+    }
+
 }
+
+fun Fragment.coreComponent()= (requireContext().applicationContext as HungerBoxApplication).coreComponent

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".addrecipe.ui.steps.RecipeServingDetailsFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.androidy.hungerbox.addrecipe.ui.AddRecipeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/page_margin">
+
+
+        <TextView
+            android:id="@+id/food_category_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_select_category"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/food_category_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:checkedButton="@={viewModel.foodCategory}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_category_tv">
+
+            <RadioButton
+                android:id="@+id/veg_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/field_vertical_margin"
+                android:text="@string/msg_veg" />
+
+            <RadioButton
+                android:id="@+id/non_veg_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_non_veg" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/servings_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/title_servings"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_category_rg" />
+
+        <EditText
+            android:id="@+id/servings_count_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:autofillHints="@string/msg_serving_counts"
+            android:background="@android:color/transparent"
+            android:hint="@string/msg_serving_counts"
+            android:inputType="number"
+            android:text="@={viewModel.servingCounts}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/servings_tv" />
+
+        <TextView
+            android:id="@+id/food_prepare_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/title_prepare_time"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/servings_count_et" />
+
+
+        <EditText
+            android:id="@+id/prepare_time_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:autofillHints="@string/title_prepare_time"
+            android:background="@android:color/transparent"
+            android:hint="@string/title_prepare_time"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="@={viewModel.prepareTime}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_prepare_time_tv" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/prepare_time_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            app:entries="@{viewModel.time}"
+            app:selectedValue="@={viewModel.prepareTimeSpinnerCurrentItem}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_prepare_time_tv" />
+
+
+        <TextView
+            android:id="@+id/cooking_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/title_cooking_time"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prepare_time_et" />
+
+
+        <EditText
+            android:id="@+id/cooking_time_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:autofillHints="@string/title_cooking_time"
+            android:background="@android:color/transparent"
+            android:hint="@string/title_cooking_time"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="@={viewModel.cookingTime}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cooking_time_tv" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/cooking_time_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            app:entries="@{viewModel.time}"
+            app:selectedValue="@={viewModel.cookingTimeSpinnerCurrentItem}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cooking_time_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

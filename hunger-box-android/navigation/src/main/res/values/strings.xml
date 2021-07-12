@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_name_profile">profile</string>
+    <string name="module_name_auth">auth</string>
+    <string name="module_name_add_recipe">addRecipe</string>
+    <string name="module_name_feeds">profile</string>
+</resources>
