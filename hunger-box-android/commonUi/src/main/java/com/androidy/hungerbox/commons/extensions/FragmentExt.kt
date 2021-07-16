@@ -16,6 +16,7 @@ import com.androidy.hungerbox.commonUi.R
 fun Fragment.getAppCompatActivity() =
         requireActivity() as AppCompatActivity
 
+
 fun Fragment.getDrawerLayout(): DrawerLayout =
         requireActivity().findViewById(R.id.drawer_layout)
 

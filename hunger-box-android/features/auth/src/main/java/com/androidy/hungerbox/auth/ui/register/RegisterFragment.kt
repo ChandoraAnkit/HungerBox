@@ -11,11 +11,15 @@ import com.androidy.hungerbox.auth.R
 import com.androidy.hungerbox.auth.databinding.FragmentRegisterBinding
 import com.androidy.hungerbox.commons.base.BaseFragment
 import com.androidy.hungerbox.auth.AuthViewModel
+import com.androidy.hungerbox.auth.di.DaggerLoginComponent
+import com.androidy.hungerbox.auth.di.DaggerRegisterComponent
+
 import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
 import com.androidy.hungerbox.commons.extensions.hideLoader
 import com.androidy.hungerbox.commons.extensions.setUpSnackBar
 import com.androidy.hungerbox.commons.extensions.setUpToolbar
 import com.androidy.hungerbox.commons.extensions.showLoader
+import com.androidy.hungerbox.coreComponent
 import com.androidy.hungerbox.utils.EventObserver
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding, AuthViewModel>
@@ -63,6 +67,12 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding, AuthViewModel>
     }
 
     override fun initDi() {
+        DaggerRegisterComponent
+            .builder()
+            .coreComponent(coreComponent())
+            .registerFragment(this)
+            .build()
+            .inject(this)
     }
 
     override fun initDataBinding() {

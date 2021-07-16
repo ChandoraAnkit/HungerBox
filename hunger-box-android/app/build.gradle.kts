@@ -53,6 +53,7 @@ android {
     )
 
     buildFeatures {
+        viewBinding = true
         dataBinding = true
     }
 }
@@ -63,10 +64,33 @@ dependencies {
 
     implementation(project(BuildModules.CORE))
     implementation(project(BuildModules.COMMON_UI))
+    implementation(project(BuildModules.NAVIGATION))
+
 
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.MULTI_DEX)
+
+    implementation(Dependencies.VECTOR_DRAWABLE)
+    implementation(Dependencies.MATERIAL_DESIGN)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.LIFECYCLE_EXT)
+
+    implementation(Dependencies.NAVIGATION_FRAG)
+    implementation(Dependencies.NAVIGATION_FRAG_KTX)
+    implementation(Dependencies.NAVIGATION_UI)
+    implementation(Dependencies.NAVIGATION_UI_KTX)
+    implementation(Dependencies.NAVIGATION_DYNAMIC_FEATURE_FRAG)
+
+
+    implementation(Dependencies.DAGGER)
+    kapt(AnnotationProcessorDependencies.DAGGER_COMPILER)
+    kapt(AnnotationProcessorDependencies.DAGGER_PROCESSOR)
+
+    implementation(DebugDependencies.TIMBER)
+    implementation(Dependencies.COROUTINE_EXT)
+
+    implementation(Dependencies.FIREBASE_AUTH)
 
     implementation(Dependencies.VECTOR_DRAWABLE)
     implementation(Dependencies.MATERIAL_DESIGN)

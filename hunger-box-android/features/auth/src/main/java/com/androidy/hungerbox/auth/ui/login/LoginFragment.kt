@@ -10,8 +10,15 @@ import com.androidy.hungerbox.commons.base.BaseFragment
 import com.androidy.hungerbox.auth.AuthViewModel
 import com.androidy.hungerbox.auth.R
 import com.androidy.hungerbox.auth.databinding.FragmentLoginBinding
+
+import com.androidy.hungerbox.auth.di.DaggerLoginComponent
 import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
 import com.androidy.hungerbox.commons.extensions.*
+import com.androidy.hungerbox.coreComponent
+
+import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
+import com.androidy.hungerbox.commons.extensions.*
+
 import com.androidy.hungerbox.utils.EventObserver
 
 
@@ -27,7 +34,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, AuthViewModel>
         toolbarBinding = LayoutToolbarBinding.inflate(layoutInflater)
         getAppCompatActivity().supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
-//        setUpToolbar(toolbarBinding.toolbar, R.id.navigation_login_fragment)
+        setUpToolbar(toolbarBinding.toolbar, R.id.login_fragment)
 
     }
 
@@ -66,6 +73,13 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, AuthViewModel>
     }
 
     override fun initDi() {
+
+        DaggerLoginComponent
+            .builder()
+            .coreComponent(coreComponent())
+            .loginFragment(this)
+            .build()
+            .inject(this)
     }
 
     override fun initDataBinding() {
