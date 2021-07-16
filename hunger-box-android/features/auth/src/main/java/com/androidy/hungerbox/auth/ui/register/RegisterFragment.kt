@@ -13,6 +13,7 @@ import com.androidy.hungerbox.commons.base.BaseFragment
 import com.androidy.hungerbox.auth.AuthViewModel
 import com.androidy.hungerbox.auth.di.DaggerLoginComponent
 import com.androidy.hungerbox.auth.di.DaggerRegisterComponent
+
 import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
 import com.androidy.hungerbox.commons.extensions.hideLoader
 import com.androidy.hungerbox.commons.extensions.setUpSnackBar

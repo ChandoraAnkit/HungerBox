@@ -4,7 +4,7 @@
     app:startDestination="@+id/fragment_profile">
 
     <fragment
-        android:id="@+id/fragment_profile"
+        android:id="@+id/profile_fragment"
         android:name="com.androidy.hungerbox.profile.ui.ProfileFragment"
         android:label="@string/title_profile"
         />

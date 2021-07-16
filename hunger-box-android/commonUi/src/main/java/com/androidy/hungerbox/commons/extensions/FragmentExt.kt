@@ -17,6 +17,8 @@ fun Fragment.getAppCompatActivity() =
         requireActivity() as AppCompatActivity
 
 
+fun Fragment.getDrawerLayout(): DrawerLayout =
+        requireActivity().findViewById(R.id.drawer_layout)
 
 fun Fragment.setUpToolbar(toolbar: Toolbar,
                           @IdRes vararg topLevelFragments: Int,

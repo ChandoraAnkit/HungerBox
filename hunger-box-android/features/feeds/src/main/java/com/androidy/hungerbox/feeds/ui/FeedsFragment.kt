@@ -6,6 +6,9 @@ import androidx.fragment.app.viewModels
 import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
 
 import com.androidy.hungerbox.commons.base.BaseFragment
+
+import com.androidy.hungerbox.commons.extensions.getDrawerLayout
+
 import com.androidy.hungerbox.commons.extensions.setUpToolbar
 import com.androidy.hungerbox.coreComponent
 import com.androidy.hungerbox.feeds.R
