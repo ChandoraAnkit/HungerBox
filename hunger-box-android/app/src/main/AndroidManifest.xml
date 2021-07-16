@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Base.AppTheme">
         <activity
-            android:name="com.androidy.hungerbox.commons.HungerBoxActivity"
+            android:name="com.androidy.hungerbox.HungerBoxActivity"
             android:theme="@style/AppTheme.OverlapSystemBar"
             android:label="@string/app_name">
             <intent-filter>

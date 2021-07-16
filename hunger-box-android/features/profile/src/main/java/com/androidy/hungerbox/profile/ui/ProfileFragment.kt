@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.androidy.hungerbox.commonUi.databinding.LayoutToolbarBinding
 import com.androidy.hungerbox.commons.base.BaseFragment
-import com.androidy.hungerbox.commons.extensions.getDrawerLayout
 import com.androidy.hungerbox.commons.extensions.setUpToolbar
 import com.androidy.hungerbox.coreComponent
 import com.androidy.hungerbox.profile.R
 import com.androidy.hungerbox.profile.databinding.FragmentProfileBinding
 import com.androidy.hungerbox.profile.di.DaggerProfileComponent
 import com.androidy.hungerbox.profile.di.ProfileModule
+import com.androidy.hungerbox.utils.getDrawerLayout
 
 
 class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>

@@ -7,6 +7,7 @@ dependencies{
 
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.APP_COMPAT)
+    implementation(project(BuildModules.CORE))
 
     implementation(Dependencies.NAVIGATION_FRAG)
     implementation(Dependencies.NAVIGATION_FRAG_KTX)

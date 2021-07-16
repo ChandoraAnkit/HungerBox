@@ -53,6 +53,7 @@ android {
     )
 
     buildFeatures {
+        viewBinding = true
         dataBinding = true
     }
 }
@@ -63,6 +64,7 @@ dependencies {
 
     implementation(project(BuildModules.CORE))
     implementation(project(BuildModules.COMMON_UI))
+    implementation(project(BuildModules.NAVIGATION))
 
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.KOTLIN)
@@ -77,6 +79,7 @@ dependencies {
     implementation(Dependencies.NAVIGATION_FRAG_KTX)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.NAVIGATION_UI_KTX)
+    implementation(Dependencies.NAVIGATION_DYNAMIC_FEATURE_FRAG)
 
 
     implementation(Dependencies.DAGGER)
@@ -85,6 +88,9 @@ dependencies {
 
     implementation(DebugDependencies.TIMBER)
     implementation(Dependencies.COROUTINE_EXT)
+
+    implementation(Dependencies.FIREBASE_AUTH)
+
 
     testImplementation(TestDependencies.JUNIT)
     testImplementation(TestDependencies.JUNIT_EXT)

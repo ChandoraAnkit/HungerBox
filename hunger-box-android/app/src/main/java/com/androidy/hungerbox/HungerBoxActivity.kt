@@ -1,4 +1,4 @@
-package com.androidy.hungerbox.commons
+package com.androidy.hungerbox
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,9 +9,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupWithNavController
-import com.androidy.hungerbox.commonUi.R
 import com.androidy.hungerbox.commons.extensions.gone
 import com.androidy.hungerbox.commons.extensions.show
+import com.androidy.hungerbox.databinding.ActivityHungerBoxBinding
 
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_hunger_box.*
@@ -20,30 +20,32 @@ import javax.inject.Inject
 
 class HungerBoxActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityHungerBoxBinding
+
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
 
-    @Inject
-    lateinit var mAuth: FirebaseAuth
+//    @Inject
+//    lateinit var mAuth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hunger_box)
+        binding = ActivityHungerBoxBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         navController = findNavController(R.id.nav_host_fragment)
 
         initNavComponent()
-
         setUpNavigationDrawer()
 
-        bottom_nav_view.setupWithNavController(navController)
-        nav_view.setupWithNavController(navController)
+        binding.bottomNavView.setupWithNavController(navController)
+        binding.navView.setupWithNavController(navController)
 
         setDestinationChangedListener()
 
-        if (mAuth.currentUser == null)
-            navController.navigate(R.id.action_global_to_navigation_auth)
+//        if (mAuth.currentUser == null)
+//            navController.navigate(R.id.action_global_to_navigation_auth)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -62,7 +64,7 @@ class HungerBoxActivity : AppCompatActivity() {
     private fun initNavComponent(){
 //        DaggerNavigationComponent
 //            .builder()
-//            .navigationModule(NavigationModule(navController))
+//            .navController(navController)
 //            .build()
     }
 
@@ -73,8 +75,8 @@ class HungerBoxActivity : AppCompatActivity() {
                 R.id.navigation_auth -> hideTopLevelUi()
 
                 else -> {
-                    drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNDEFINED)
-                    bottom_nav_view.show()
+                    binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNDEFINED)
+                    binding.bottomNavView.show()
                 }
 
             }
@@ -83,12 +85,12 @@ class HungerBoxActivity : AppCompatActivity() {
 
 
     private fun hideTopLevelUi() {
-        drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
-        bottom_nav_view.gone()
+        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        binding.bottomNavView.gone()
     }
 
     private fun setUpNavigationDrawer() {
-        drawer_layout.run {
+        binding.drawerLayout.run {
             setStatusBarBackground(R.color.colorPrimaryDark)
         }
     }

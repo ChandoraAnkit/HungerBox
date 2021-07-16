@@ -27,6 +27,10 @@ android{
         isEnabled = true
     }
 
+    viewBinding{
+        isEnabled = true
+    }
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
